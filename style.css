@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+    }
+body {
+    width: min(1440px, 100%);
+    font-size: 15px;
+    background-color: var(--very-light-gray);
+}
+p {
+    font-family: 'Lexend Deca', sans-serif;
+} 
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}    
+.main-container {
+    display: flex;
+    min-height: 500px;
+    width: min(900px, 100%);
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.main-container .sedans, .suvs, .luxury {
+    color: var(--transparent-white);
+    padding: 3rem;
+    flex-direction: column;
+    width: min(400px, 100%);
+}
+.main-container .sedans {
+    background-color: var(--bright-orange);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.main-container .suvs {
+    background-color: var(--dark-cyan);
+}
+.main-container .luxury {
+    background-color: var(--very-dark-cyan);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.main-container .button-container button {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: var(--transparent-white);
+    border-radius: 50px;
+    border: none;
+    width: 130px;
+    cursor: pointer;
+}
+.sedans .button-container button {
+    color: var(--bright-orange);
+}
+.suvs .button-container button {
+    color: var(--dark-cyan);
+}
+.luxury .button-container button {
+    color: var(--very-dark-cyan);
+}
+.main-container .button-container button:hover {
+    border: 1px solid var(--transparent-white);
+    background: transparent;
+    color: var(--transparent-white);
+}
+.main-container .text-container {
+    margin: 40px 0 80px 0;
+    line-height: 1.5rem;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); } 
+
+
+@media (max-width: 900px) {
+    .main-container {
+        width: 375px;
+        flex-direction: column;
+    }
+    .main-container .sedans {
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+        .main-container .luxury {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+    }
+}
